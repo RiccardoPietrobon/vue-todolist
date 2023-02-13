@@ -22,45 +22,57 @@ const app = Vue.createApp({
         return {
             tasks: [
                 {
-                    text: "Fai la spesa",
+                    description: "Fai la spesa",
                     done: true,
                 },
                 {
-                    text: "Dentista ore 15:00",
+                    description: "Dentista ore 15:00",
                     done: true,
                 },
                 {
-                    text: "Meccanico mercoledì",
+                    description: "Meccanico mercoledì",
                     done: false,
                 },
                 {
-                    text: "Comprare aspirapolvere",
+                    description: "Comprare aspirapolvere",
                     done: true,
                 },
                 {
-                    text: "Pulire la camera",
+                    description: "Pulire la camera",
                     done: true,
                 },
                 {
-                    text: "Prepara la cena",
+                    description: "Prepara la cena",
                     done: false,
                 },
                 {
-                    text: "Sistema garage",
+                    description: "Sistema garage",
                     done: true,
                 },
                 {
-                    text: "Tagliare l'erba",
+                    description: "Tagliare l'erba",
                     done: false,
                 },
 
-            ]
+            ],
+
+            newObj: {
+                description: "Inserisci l'elemento",
+                done: true,
+            },
 
         }
     },
 
     methods: {
-        if()
+        removeTask(i) {
+            this.tasks.splice(i, 1)
+        },
+
+        addTask() {
+
+            const oggetto = {},
+        },
     },
 
     //created() {},

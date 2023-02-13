@@ -36,7 +36,41 @@
 </head>
 
 <body>
+    <div id="app">
 
+        <nav class="navbar bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/1200px-Home-icon.svg.png"
+                        alt="House" width="30">
+                </a>
+            </div>
+        </nav>
+
+        <div class="container">
+
+            <div class="input-group my-3">
+
+                <input v-model="newObj.description" @keyUp.enter="addTask()" type="text" class="form-control"
+                    placeholder="Aggiungi" aria-label="Aggiungi" aria-describedby="button-addon2">
+
+                <button @click="addTask()" class="btn btn-outline-primary" type="button"
+                    id="button-addon2">Aggiungi</button>
+            </div>
+
+            <h1>Cose da fare</h1>
+            <ol class="list-group list-group-numbered">
+                <li v-for="(task, index) in tasks" class="d-flex justify-content-between my-1 py-2"
+                    :class="(task.done) ? 'list-done' : '' ">
+                    {{task.description}}
+                    <span class="badge bg-primary rounded-pill">
+                        <i class="fa-sharp fa-solid fa-xmark" @click="removeTask()"></i>
+                    </span>
+                </li>
+            </ol>
+        </div>
+
+    </div>
 
 </body>
 
