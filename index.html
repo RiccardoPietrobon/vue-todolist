@@ -64,7 +64,7 @@
                     :class="(task.done) ? 'list-done' : '' ">
                     {{task.description}}
                     <span class="badge bg-primary rounded-pill">
-                        <i class="fa-sharp fa-solid fa-xmark" @click="removeTask()"></i>
+                        <i class="fa-sharp fa-solid fa-xmark" @click="removeTask(index)"></i>
                     </span>
                 </li>
             </ol>

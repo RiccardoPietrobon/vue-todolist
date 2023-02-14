@@ -57,21 +57,25 @@ const app = Vue.createApp({
             ],
 
             newObj: {
-                description: "Inserisci l'elemento",
-                done: true,
+                description: "",
+                done: false,
             },
 
         }
     },
 
     methods: {
-        removeTask(i) {
-            this.tasks.splice(i, 1)
+        removeTask(index) {
+            this.tasks.splice(index, 1)
         },
 
         addTask() {
 
-            const oggetto = {},
+            const objCopy = {
+                ...this.newObj,
+            };
+
+            this.tasks.push(objCopy);
         },
     },
 
